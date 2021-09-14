@@ -12,7 +12,6 @@
 
 #include <fcntl.h>
 #include <sbv_patches.h>
-
 #include <stdio.h>
 #include <debug.h>
 #include <fcntl.h>

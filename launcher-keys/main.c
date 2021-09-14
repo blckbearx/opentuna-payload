@@ -20,6 +20,9 @@
 #include <string.h>
 #include <stdint.h>
 
+void _ps2sdk_libc_init() {}
+void _ps2sdk_libc_deinit() {}
+
 #define NTSC 2
 #define PAL 3
 
@@ -155,31 +158,31 @@ int main(int argc, char *argv[])
 
 	if (lastKey & PAD_CIRCLE)
 	{
-		if (file_exists("mc0:/APPS/ULE.ELF"))
-			LoadElf("mc0:/APPS/ULE.ELF", "mc0:/APPS/");
+		if (file_exists("mc0:/BOOT/BOOT.ELF"))
+			LoadElf("mc0:/BOOT/BOOT.ELF", "mc0:/BOOT/");
 
-		if (file_exists("mc1:/APPS/ULE.ELF"))
-			LoadElf("mc1:/APPS/ULE.ELF", "mc1:/APPS/");
+		if (file_exists("mc1:/BOOT/BOOT.ELF"))
+			LoadElf("mc1:/BOOT/BOOT.ELF", "mc1:/BOOT/");
 
-		if (file_exists("mc0:/APPS/OPNPS2LD.ELF"))
-			LoadElf("mc0:/APPS/OPNPS2LD.ELF", "mc0:/APPS/");
+		if (file_exists("mc0:/OPL/OPNPS2LD.ELF"))
+			LoadElf("mc0:/OPL/OPNPS2LD.ELF", "mc0:/OPL/");
 
-		if (file_exists("mc1:/APPS/OPNPS2LD.ELF"))
-			LoadElf("mc1:/APPS/OPNPS2LD.ELF", "mc0:/APPS/");
+		if (file_exists("mc1:/OPL/OPNPS2LD.ELF"))
+			LoadElf("mc1:/OPL/OPNPS2LD.ELF", "mc1:/OPL/");
 	}
 	else
 	{
-		if (file_exists("mc0:/APPS/OPNPS2LD.ELF"))
-			LoadElf("mc0:/APPS/OPNPS2LD.ELF", "mc0:/APPS/");
+		if (file_exists("mc0:/OPL/OPNPS2LD.ELF"))
+			LoadElf("mc0:/OPL/OPNPS2LD.ELF", "mc0:/OPL/");
 
-		if (file_exists("mc1:/APPS/OPNPS2LD.ELF"))
-			LoadElf("mc1:/APPS/OPNPS2LD.ELF", "mc0:/APPS/");
+		if (file_exists("mc1:/OPL/OPNPS2LD.ELF"))
+			LoadElf("mc1:/OPL/OPNPS2LD.ELF", "mc1:/OPL/");
 
-		if (file_exists("mc0:/APPS/ULE.ELF"))
-			LoadElf("mc0:/APPS/ULE.ELF", "mc0:/APPS/");
+		if (file_exists("mc0:/BOOT/BOOT.ELF"))
+			LoadElf("mc0:/BOOT/BOOT.ELF", "mc0:/BOOT/");
 
-		if (file_exists("mc1:/APPS/ULE.ELF"))
-			LoadElf("mc1:/APPS/ULE.ELF", "mc1:/APPS/");
+		if (file_exists("mc1:/BOOT/BOOT.ELF"))
+			LoadElf("mc1:/BOOT/BOOT.ELF", "mc1:/BOOT/");
 	}
 
 	__asm__ __volatile__(
